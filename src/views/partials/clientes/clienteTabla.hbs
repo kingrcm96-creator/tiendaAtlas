@@ -1,0 +1,33 @@
+{{#if clientes}}
+<table class="table table-dark table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <th>Num.</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th>Correo</th>
+            <th class="text-center">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each clientes}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{nombre}}</td>
+            <td>{{apellido}}</td>
+            <td>{{edad}}</td>
+            <td>{{correo}}</td>
+            <td class="text-center">
+                <a href="/clientes/editar/{{_id}}" class="btn btn-info btn-sm text-white fw-bold">Actualizar</a>
+                <a href="/clientes/eliminar/{{_id}}" class="btn btn-danger btn-sm fw-bold">Eliminar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="text-center p-4 border border-secondary rounded">
+    <p class="m-0 fs-5">No hay clientes registrados.</p>
+</div>
+{{/if}}

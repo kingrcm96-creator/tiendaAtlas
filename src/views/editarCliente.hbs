@@ -1,0 +1,82 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+        <div class="card card-body bg-dark text-white border-secondary rounded-3 shadow">
+            
+            <h3 class="fw-bold mb-4 text-center">Editar Cliente</h3>
+
+            <form action="/clientes/editar/{{cliente._id}}" method="POST">
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input 
+                        type="text" 
+                        name="nombre" 
+                        id="nombre"
+                        value="{{cliente.nombre}}" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input 
+                        type="text" 
+                        name="apellido" 
+                        id="apellido"
+                        value="{{cliente.apellido}}" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="edad" class="form-label">Edad:</label>
+                    <input 
+                        type="number" 
+                        name="edad" 
+                        id="edad"
+                        value="{{cliente.edad}}" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo electrónico:</label>
+                    <input 
+                        type="email" 
+                        name="correo" 
+                        id="correo"
+                        value="{{cliente.correo}}" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        required
+                    >
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Teléfono:</label>
+                    <input 
+                        type="text" 
+                        name="telefono" 
+                        id="telefono"
+                        value="{{cliente.telefono}}" 
+                        class="form-control bg-dark text-white border-secondary" 
+                        required
+                    >
+                </div>
+
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary fw-bold">
+                        Guardar cambios
+                    </button>
+                    <a href="/clientes" class="btn btn-outline-secondary text-white">
+                        Regresar a clientes
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
